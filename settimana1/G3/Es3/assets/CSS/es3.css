@@ -1,43 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-html, body {
-    text-align: left;
-    background: linear-gradient(90deg, #551a55, #f187f1);
+body {
+    text-align: center;
+    margin: 0;
+    color: #333;
+    background: linear-gradient(90deg, #aa33aa, #ee5097);
     margin: 0px;
     font-family: 'Roboto', sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-    
-
-}
+    font-size: 1.2em;
+}    
 
 #logo {
-    margin-top: 10px;
-    text-align: center;
-    max-width: 300px;
-
+    width: 200px;
+    margin: 1rem; /*mi imposta il margine superiore e inferiore*/
 }
 
-#withebox {
-    background: white;
-    height: 75px;
+h1 {
     text-align: center;
+    margin-bottom: 2rem; /*mi dice il margine sotto*/
 }
 
-figure {
+.content {
+    width: 50%; /*mi dice la larghezza del contenuto e si riferisce a body, se fosse stato 100% avrebbe occupato tutto body (schermo)*/  
+    text-align: left; /*il testo è allineato a sx anche se il contenuto è centrale*/
+    margin: 0; /*non voglio il margine di default*/
+    margin-left: auto; 
+    margin-right: auto; /*questi due auto fanno si che si che i margini laterali siano uguali, ne risulta testo centrale*/ 
+}
+
+.content video { /*utilizzo un selettore discendente, quindi applicato a tutti i video dentro la classe .content */
+    width: 100%; /*larghezza video che è 100% del body*/
+    border-radius: 10px; /*smussamento dei contorni del video*/
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+    /*box-shadow può essere applicata a tutti gli elementi.
     
+    * Il primo valore (5px) imposta lo spostamento dell'ombra in senso orizzontale. Essendo il valore positivo, 
+    l'ombra viene collocata sul lato destro del box. Se si usano valori negativi l'ombra viene collocata sul lato sinistro.
+    *Il secondo valore (5px) imposta lo spostamento in senso verticale. Dal momento che anche in questo caso si è usato un valore positivo, 
+    l'ombra viene collocata sul lato inferiore del box. Usando valori negativi l'ombra viene collocata sul lato superiore del box.
+    *Il terzo valore (10px) definisce il livello di sfocatura (blur radius) dell'ombra: più alto è questo valore, più sfocata apparirà l'ombra. 
+    Si usi 0 se si desidera un'ombra netta e senza sfocatura. Non sono permessi valori negativi.
+    *Il quarto valore (2px) imposta il livello di diffusione (spread radius) dell'ombra. Più i valori sono alti, più l'ombra tenderà ad espandersi,
+     in tutte le direzioni. Se invece si usano valori negativi, l'ombra tende a contrarsi, fino a scomparire del tutto.
+    */
 }
 
-
-
-
-form {
+#author {
+    display: block; /*visto che è span con questo comando gli faccio occupare tutto lo spazio disponibile sulla riga*/
+    color: rgba(0, 0, 0, 0.4);
     text-align: center;
+    margin-top: 1rem; /*margine sopra*/
+}
+
+#featured {
+    border-left: 1px solid #ffd977; /*linea verticale che identifica il testo */
+    padding-left: 1rem; /*mi distanzia la scritta dalla riga verticale*/
+    margin-top: 2rem; /*distanza dal author*/
+}
+
+#featured span {
+    color: #b5460f;
+    display: block;
+}
+
+#featured a, #link { /*tutti a dentro featured NON CAPISCO LINK*/
+    color: #177;
+}
+
+.ingredients {
+    margin-top: 4rem;
+}
+
+.ingredients p, ol li p: :first-of-type { /*primo elemento figlio specifico*/
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: 100;
+}
+
+.section-header {
+    border-botton: 1px solid rgb(197, 243, 243) /*come border left, quindi riga sotto*/
+    margin-bottom: 2rem; /*margine della riga*/
 }
 
 ul {
-    padding-inline-start: 20px;
+    margin-bottom: 2rem;
 }
 
+li {
+    margin-bottom: 1rem;
+}
 
+nav {    /*fa la riga bianca come sfondo*/
+    background-color: #fefbf1;
+    padding: 1rem 0; /*spessore zona bianca*/
+    border-top: 1px solid #ffd977; /*riga che delinea bordo superiore*/
+    color: #39b7b7; /*colore scritta*/
+    font-size: 0.8rem;
+    margin-bottom: 4rem; /*margine inferiore distanza dalla sessione successiva*/ 
+}
 
+input:focus { /*quando si clicca sul form si crea tipo un'ombra che circonda la casella selezionata per focalizzare la zona*/
+    box-shadow: 0px 0px 4px 5px red;
+}
+
+#feature a:hover { /*quando puntatore passa su un elemento gli elementi a di #features si colorano di blu*/
+    color: blue;
+}
