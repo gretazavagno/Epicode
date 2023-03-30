@@ -31,7 +31,7 @@ h1 {
 .content video { /*utilizzo un selettore discendente, quindi applicato a tutti i video dentro la classe .content */
     width: 100%; /*larghezza video che è 100% del body*/
     border-radius: 10px; /*smussamento dei contorni del video*/
-    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 
     /*box-shadow può essere applicata a tutti gli elementi.
     

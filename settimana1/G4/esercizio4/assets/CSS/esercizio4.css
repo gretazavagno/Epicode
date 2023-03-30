@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+Html, body {
+	Margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins; 
+    font-size: 1em;
+    line-height: 1.2em;
+    background: url(assets/IMG/sfondo.png);
+}
+
+
+#container1 {
+    text-align: center;
+    background-color: rgb(47, 132, 143);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    box-shadow: 4px 4px 8px 2px #666);
+    color:white;
+    font-size: large;
+}
+
+#container1 ul {
+    display: inline-block;
+}
+
+#container1 a:link, #container a:visited {
+    text-decoration: none;
+    color: white;
+}
+#container1 a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+#container1 ul:hover {       /*RIVEDERE (passo su un link e tutti i pallini diventano rossi*/
+    color: red;
+    list-style-type:square;
+}
+
+
+/*-------------------HEADER-------------------------------*/
+
+#container2 {
+    text-align: center;
+    background-color:white;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 4px 4px 8px 2px black;
+    color: black;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+h1 + p {
+    color: grey;
+    font-style: oblique;
+}
+
+strong {
+    color: purple;
+}
+
+#container2 ul, ol {
+    display: inline-block;
+}
+
+li code {
+    background-color: rgb(202, 202, 202);
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 3px;
+
+}
+
+caption {
+    font-style: oblique;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+table td{
+    padding: 15px;
+}
+
+th {
+    padding: 15px;
+}
+
+thead {
+    background-color: rgb(89, 130, 190);
+}
+
+
+.titolo .riga {
+    border-right: 2px;
+    border-color: white;
+}
+
+.pari {
+    background-color: rgb(201, 199, 199);
+}
+
+
+#toolonline a:link, #toolonline a:visited {
+    text-decoration: underline;
+    color: blue;
+}
+
+#toolonline a:hover {
+    color:rgb(89, 130, 190);
+}
+
+/*VIDEO*/
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px 2px #666;
+    padding: 0px;
+    border: 0px;
+}
+
+#video {
+    padding: 80px;
+}
+
+.novita {
+    background-color: rgb(205, 203, 203);
+    border-color: black;
+    padding: 10px;
+    border: 2px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: rgb(100, 100, 208);
+    color: white;
+    box-sizing: 20px;
+    border: 0px;
+    padding: 5px;
+}
+
+#art1 {
+    background-color: rgb(205, 203, 203);
+    border-color: black;
+    padding: 10px;
+    border: 2px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+ #art2 {
+    background-color: rgb(205, 203, 203);
+    border-color: black;
+    padding: 10px;
+    border: 2px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+
+
+ }
+
+ #art3{
+    background-color: rgb(205, 203, 203);
+    border-color: black;
+    padding: 10px;
+    border: 2px;
+    margin-right: 10px;
+    margin-bottom: 70px;
+    text-align: left;
+
+ }
+
+
+ #art1 span {
+    text-align: right;
+    padding-right: 20px;
+ }
+
+ #art2 span {
+    text-align: right;
+    padding-right: 20px;
+ }
+
+ #art3 span {
+    text-align: right;
+    padding-right: 50px;
+ }
+
+ /*FOOTER*/
+
+ footer {
+    background-image: linear-gradient(to bottom, rgb(42, 100, 142), rgb(41, 44, 55));
+    text-align: center;
+    background-color:white;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 4px 4px 8px 2px black;
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+ }
+
+ address a:link, addres a:visited { 
+    text-decoration: underline;
+    color: rgb(204, 36, 176);
+}
+
+address a:hover {
+    color:rgb(124, 99, 173);
+}
+
