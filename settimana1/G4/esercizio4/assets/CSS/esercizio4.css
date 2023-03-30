@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@font-face {
+    font-family: "FontAwesone";
+    src: url('../CSS/fontawesome.css');
+}
 
 Html, body {
 	Margin: 0 auto;
@@ -7,19 +11,28 @@ Html, body {
     font-family: Poppins; 
     font-size: 1em;
     line-height: 1.2em;
-    background: url(assets/IMG/sfondo.png);
+    background-image: url('../IMG/sfondo.png');
+    background-position: center center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
 #container1 {
     text-align: center;
-    background-color: rgb(47, 132, 143);
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    box-shadow: 4px 4px 8px 2px #666);
+    font-weight: bold;
+    background-image: linear-gradient(180deg, rgb(17, 142, 119), rgb(11, 75, 75) 80%);
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     color:white;
-    font-size: large;
+    font-size: large;  
+    padding: 20px; 
+    border: 1px solid rgb(17, 142, 119);
+    box-shadow: 10px 10px 30px 10px black, -10px -10px 30px 10px white;
+    text-transform: uppercase; /*tutto maiuscolo*/
+    
 }
 
 #container1 ul {
@@ -35,10 +48,23 @@ Html, body {
     color: red;
 }
 
-#container1 ul:hover {       /*RIVEDERE (passo su un link e tutti i pallini diventano rossi*/
-    color: red;
-    list-style-type:square;
+header nav ul {
+    margin: 0;
 }
+
+header nav li {
+    list-style: none;
+}    
+
+#container1 li a:hover {
+    color:red;
+}
+
+header nav li a::before { /*inserire icona*/     
+    
+}
+
+
 
 
 /*-------------------HEADER-------------------------------*/
@@ -46,12 +72,12 @@ Html, body {
 #container2 {
     text-align: center;
     background-color:white;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
     box-shadow: 4px 4px 8px 2px black;
     color: black;
-    padding-top: 10px;
-    padding-left: 10px;
+    padding: 10px;
+   
 }
 
 h1 + p {
@@ -80,10 +106,13 @@ caption {
     text-align: center;
 }
 
+
 table {
+
     border-collapse: collapse;
     width: 100%;
     text-align: center;
+    margin: 0, auto;
 }
 
 table td{
@@ -138,7 +167,6 @@ iframe {
     border-color: black;
     padding: 10px;
     border: 2px;
-    margin-right: 10px;
 }
 
 button {
@@ -154,7 +182,6 @@ button {
     border-color: black;
     padding: 10px;
     border: 2px;
-    margin-right: 10px;
     margin-bottom: 10px;
     text-align: left;
 }
@@ -163,7 +190,6 @@ button {
     border-color: black;
     padding: 10px;
     border: 2px;
-    margin-right: 10px;
     margin-bottom: 10px;
     text-align: left;
 
@@ -175,7 +201,6 @@ button {
     border-color: black;
     padding: 10px;
     border: 2px;
-    margin-right: 10px;
     margin-bottom: 70px;
     text-align: left;
 
@@ -203,8 +228,6 @@ button {
     background-image: linear-gradient(to bottom, rgb(42, 100, 142), rgb(41, 44, 55));
     text-align: center;
     background-color:white;
-    margin-left: 10px;
-    margin-right: 10px;
     box-shadow: 4px 4px 8px 2px black;
     color: white;
     padding-top: 10px;
