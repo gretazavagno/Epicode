@@ -35,9 +35,6 @@ Html, body {
     
 }
 
-#container1 ul {
-    display: inline-block;
-}
 
 #container1 a:link, #container a:visited {
     text-decoration: none;
@@ -50,13 +47,14 @@ Html, body {
 
 header nav ul {
     margin: 0;
+    list-style-position: inside; /*faccio in modo che i puntini seguano il testo*/
+    list-style: inside url(../IMG/star-solid.svg);
 }
 
 header nav li {
-    list-style: none;
 }    
 
-#container1 li a:hover {
+header nav a:hover {
     color:red;
 }
 
@@ -64,6 +62,13 @@ header nav li a::before { /*inserire icona*/
     
 }
 
+.fa-star {
+    color: white;
+    list-style: inside;
+}
+.fa-star:hover {
+    color: red;
+}
 
 
 
