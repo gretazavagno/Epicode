@@ -1,0 +1,240 @@
+ /*---IMPORTO OPEN SANS e MONSERRAT---*/
+
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+ 
+ 
+ /*------------APPROCCIO MINIMALE DI RESET------------*/
+
+Html, body {
+	Margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 1.2rem;
+    line-height: 1.65rem;
+    color: #393d41;
+}
+
+#logo {
+    background-color: black;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: auto;
+}
+
+#header {
+    background-image: url(../IMG/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin: 0 auto;
+    padding-top: 125px;
+    padding-bottom: 125px; /*distanza da titolo a paragrafo*/
+}
+
+#header p {
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-left: 200px;    /*aggiunte queste due */
+    padding-right: 200px;
+    font-weight: 600;
+    color: #393d41;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+button {
+    padding: 10px 10px;
+    background-color: #f04c2f;
+    color: white;
+    border-radius: 3px;
+    border-color: #f04c2f;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#header h1 {
+    color: #25a2c3;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    font-weight: 700;
+}
+
+
+/*------MAIN-------------------------------------------------------------------*/
+
+main {
+    text-align: center;
+}
+#mainbianco {
+    background-color: white;
+    margin-top: 0px 0px;
+}
+
+#mainrosso {
+    background-color: red;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 25px;
+    color: white;
+}
+
+#tonda {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+#tonda img {                  /*--------------IMMAGINE DENTRO UN CERCHIO*/
+    border-radius: 180px;
+    width: 300px;
+    height: 300px;
+}
+
+#mainbianco h2 {
+    color: #25a2c3;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+
+
+
+#mainrosso h2 {
+    margin-top: 0px;
+    padding-top: 25px;
+    font-weight: bold;
+}
+
+cite p {
+    font-weight: lighter;
+    font-size: smaller;
+
+}
+
+
+
+/*------------------------CARDS 1 --------------------------*/
+
+
+#cards h2 {
+    color: #25a2c3;
+    font-weight: bold;
+}
+
+.w3-container h2 {
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.w3-container p {
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+.w3-border-black {
+    border-color: #393d41;
+    border-width: 20px;
+}
+
+.w3-card-4 img {
+    text-align: center;
+    margin: 0 auto;
+}
+.w3-card-4 {
+    margin: 0 auto;
+}
+
+
+/*---------------------CARD 2------------------------*/
+
+#cards h2 {
+    color: #25a2c3;
+    font-weight: bold;
+}
+
+.w3-container h2 {
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.w3-container p {
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+.w3-border-black {
+    border-color: #393d41;
+    border-width: 20px;
+}
+
+.w3-card-4 img {
+    text-align: center;
+    margin: 0 auto;
+}
+.w3-card-4 {
+    margin: 40px auto;
+}
+
+/*----------FOOTER------------------------------------------------*/
+
+#footer {
+    background-color: #25a2c3;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+}
+
+#footer h2 {
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+#footer a {  
+    padding-bottom: 20px;
+    margin: 0 auto;
+    text-decoration: underline;
+
+}
+
+address {
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+
+
+/*-------------ICONE------------------------------------------------*/
+
+                            /*faccio riferimento alla classe specifica e dico le dimensioni dell'icona*/
+.fa-square-phone-flip {     /*icona telefono*/
+    font-size: 20px;
+}
+
+.fa-envelope { /*icona email*/
+    font-size: 20px;
+}
+
+.fa-location-dot {  /*icona address*/
+    font-size: 20px;
+}
+
+
+footer p ::before {  /*metto danti a telefono e email l'icona*/
+    content:url(fa-location-dot);
+}
+
+footer addres ::before {   /*metto davanti a via email con icona*/
+    content: url(fa-location-dot);
+}
