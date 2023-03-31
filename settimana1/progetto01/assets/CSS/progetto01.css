@@ -235,6 +235,21 @@ footer p ::before {  /*metto danti a telefono e email l'icona*/
     content:url(fa-location-dot);
 }
 
-footer addres ::before {   /*metto davanti a via email con icona*/
+footer address ::before {   /*metto davanti a via email con icona*/
     content: url(fa-location-dot);
+}
+
+
+footer span {
+    text-decoration: underline;
+}
+
+footer p:last-child{
+    font-size: 0.6rem;
+}
+
+hr {
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
 }
