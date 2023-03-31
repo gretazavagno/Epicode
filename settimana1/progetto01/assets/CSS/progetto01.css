@@ -87,7 +87,7 @@ main {
 
 #tonda {
     padding-top: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 
 #tonda img {                  /*--------------IMMAGINE DENTRO UN CERCHIO*/
@@ -106,7 +106,6 @@ main {
 
 
 
-
 #mainrosso h2 {
     margin-top: 0px;
     padding-top: 25px;
@@ -117,6 +116,10 @@ cite p {
     font-weight: lighter;
     font-size: smaller;
 
+}
+
+#mainbianco p:last-child {
+    margin-bottom: 80px;
 }
 
 
