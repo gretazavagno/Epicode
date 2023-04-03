@@ -17,16 +17,15 @@ Html, body {
     font-weight: bold;
 }
 
-#collegamento {
-    margin-left: 0px;
-    margin-top: 10px;
-    margin-right: auto;
+#figure {
+    margin: 0;
 }
 
 #collegamento a:link, #collegamento a:visited {
     text-decoration: none;
     color: white;
 }
+
 #collegamento a:hover {
     text-decoration: underline;
     color: black;
