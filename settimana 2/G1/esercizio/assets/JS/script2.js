@@ -1,9 +1,11 @@
+/*JavaS senza variabili*/
+
+document.write('<div class="container"> output scritto da Javascript</div>');
+
 document.getElementById('titolo').innerHTML = '<h1>Iniziamo la nostra pratica</h1>';
 
-document.getElementById('output').innerHTML ='<p>Output scritto da JavaScript</p>';
-document.getElementById('pantera').innerHTML ='<p>Pantera scritto da JavaScript</p>';
-alert('Alert');
 
-console.log('Criceto');
-console.log('Giraffa');
-console.log('Leone');
+alert('Usa il pop up per dare dei messaggi');
+window.alert('Sto studiando JS');
+
+
