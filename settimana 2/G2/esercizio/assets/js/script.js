@@ -63,6 +63,21 @@ var name2 = 'John';
         document.write('Le variabili sono uguali')
     }
 
+    //questo si può fare anche così
+    /*if(name1 == name2){
+        console.log('Le variabili sono uguali');
+    }else{
+        console.log('Le variabili sono diverse');
+    }
+    */
+
+// in questo caso aggiungo a name la proprietà di lettera minuscola. 
+
+    if(name1.toLowerCase == name2.toLowerCase){
+        console.log('Le variabili sono uguali');
+    }else {
+        console.log('Le variabili sono diverse');
+    }
 
 
 
