@@ -300,4 +300,4 @@ console.log(starWarsCharacters);
   console.log
 
 
-//Math.randome genera un numero casuale tra 0.1 e 0.999999, math.floor arrotonda all'intero più prossimo.
+//Math.random genera un numero casuale tra 0.1 e 0.999999, math.floor arrotonda all'intero più prossimo.
