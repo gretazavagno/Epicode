@@ -1,0 +1,53 @@
+PROCEDURA DI LOGIN CON BLOCCO DELLA PAGINA RISERVATA BASE
+
+(rotta: andare da una pagina all'altra della pagina web vuol dire indirizzare il borwser verso una rotta piuttosto che un'altra ... in inglese sarebbe routing). 
+
+Che cosa mi serve? 
+
+1) La descrizione della procedura: nella pagina di Log In l'utente dovrà inserire un valore in un campo di input. Questo valore sarà memorizzato dal browser (localStorage) e utilizzato in un'altra pagina (area riservata) per salutare l'utente. 
+
+2) se l'utente non inserisce un valore e clicca sul button entra OPPURE scrive nella barra degli indirizzi il nome della pagina dell'area riservata (es. http://www.pippo.com/reserved.html), l'applicazione deve intercettare l'assenza del valore richiesto e indirizzare l'utente verso una pagina di errore. 
+
+In sostenza salviamo i dati dell'utente e vediamo se ci sono già dei dati salvati. Se non scrivi qualcosa nei campi di input e non fai click sul button non puoi accedere alla pagina successiva. ù
+
+---------------------------------------------------------------------
+PROGETTO GENERALE
+---------------------------------------------------------------------
+
+HTML 
+pagina 1 index.html (login)
+pagina 2 todo.html (area riservata)
+pagina 3 errore.html (l'errore di mancata autorizzazione è la 401)
+---------------------------------------------------------------------
+
+JAVASCRIPT
+pagina 1 (index.html --> login)
+pagina 2 (todo.html --> area riservata)
+La pagina di errore non ha bisogno di una pagina JS
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+PROGETTO DI DETTAGLIO
+---------------------------------------------------------------------
+
+PAGINA 1 - INDEX
+1. Campo di input dove scrivere il nome 
+2. Button per passare alla pagina successiva (leggere il valore del     
+    campo di input e memorizzarlo)
+        2a. Questo button dovrà: 
+            - Leggere il valore 
+            - scrivere il valore (localStorage)
+            - Passare alla pagina successiva
+
+PAGINA 2 - TODO
+1. Elemento HTML per scrivere il nome utente
+2. Controllo sull'esistenza di un nome utente (localStorage) ed 
+    eventuale reindirizzamento alla pagina di errore (se il nome utente non c'è)
+3. Elemento che consenta l'uscita dall'area riservata (che si chiama 
+    logout) ELIMINANDO i dati presenti. 
+
+PAGINA 3 - ERRORE 
+1. Messaggio di errore 
+2. Link per tornare al LogIn
+-------------------------------------------------------------------------
