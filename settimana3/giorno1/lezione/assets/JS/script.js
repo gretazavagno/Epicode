@@ -70,7 +70,7 @@ calcola = () => {
         case valore2 === estratto: 
             messaggio.innerHTML = 'Il giocatore 2 ha indovinato';
             break;
-        case Math.abs(estratto - valore1) < Math.abs(estratto - valore2): 
+        case  < Math.abs(estratto - valore2): 
             messaggio.innerHTML = 'Nessuno ha vinto ma il giocatore 1 si è avvicinato di più';
             break; 
         case Math.abs(estratto-valore2) < Math.abs(estratto - valore1): 
