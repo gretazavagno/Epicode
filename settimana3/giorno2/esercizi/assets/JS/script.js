@@ -4,28 +4,18 @@ var stringa1 = 'arcobaleno';
 var stringa2 = 'colorato';
 var n = 3;
 
-concatenazione = (valore1, valore2) => {
+var concatenazione = (valore1, valore2) => {
     
-    let stringa1a = stringa1.slice(0,2);
-    let stringa2a = stringa2.slice(stringa2.length - n);
-    console.log(stringa1a);
-    console.log(stringa2a);
-}
-concatenazione(stringa1, stringa2);
+    let stringa1a = stringa1.slice(0,2).concat(stringa2.slice(stringa2.length - n));
+    return stringa1a.toUpperCase(); //rendere maiuscolo tutto
+};
+
+console.log(concatenazione(stringa1, stringa2));
 
 /*--------------------------------------------------------------------*/
 /*ESERCIZIO 2: Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).*/
 
-var array = [];
 
-funzioneArray = () => {
-    for(let i = 0; i <= 9; i++){
-        array.push(Math.floor(Math.random()*101, ));
-        }
-    console.log(array);
-}
-
-funzioneArray();
 
 /*--------------------------------------------------------------------*/
 /* ESERCIZIO 3: Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici (suggerimento: il metodo filter può aiutare)*/
@@ -123,20 +113,37 @@ var fnc = () => {
 }; 
 console.log(fnc());
 
+//map()
 
 /*--------------------------------------------------------------------*/
 /* ESERCIZIO 9: Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.*/
-var array1_99 = [];
 
 var valoriDispari = () => {
+    var array1_99 = [];
+
     for(let i=0; i < 100; i++){
         array1_99.push(Math.floor(Math.random()*100));
     }
-    var arrayDispari = array1_99.filter(numeri => numeri%2 == 1);
+    var arrayDispari = array1_99.filter(numeri => numeri%2 === 1);
     return arrayDispari;
 }; 
 console.log(valoriDispari());
 
+
+//provare a farlo con while
+
+/*
+function dispari (){
+    const mioNuovoArray = [];
+    const i = 1;
+
+    while(i<=99){
+        mioNuovoArray.push(i);
+    }
+    return mioNuovoArray;
+};
+console.log(dispari());
+*/
 
 /*--------------------------------------------------------------------*/
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
@@ -252,25 +259,126 @@ const movies = [
   
 /*-------------------------------------------------------------------*/
 /*ESERCIZIO 10: Scrivi una funzione per trovare il film più vecchio nell'array fornito.*/
-
+const oldestMovie = (array) => {
+    let result = { Year: 2100 };
+    for (let i=0; i<array.length; i++){
+        let currentYear = parseInt(array[i].Year); //parseInt() converte un numero stringa in intero
+        if(currentYear<result.Year){
+            result = array[i];
+        }
+    }
+    return result;
+}
+console.log(oldestMovie(movies));
 
 
 
 /*-------------------------------------------------------------------*/
 /* ESERCIZIO 11: Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.*/
-  
+
+const countMovies = (array) => {
+    return array.length;
+};
+console.log(countMovies(movies));
+
 
 /*--------------------------------------------------------------------*/
 /* ESERCIZIO 12: Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.*/
-  
+
+console.log('****ESERCIZIO 12****');
+
+const onlyTitles = (array) => {
+	 array.map((elem) => elem.Title);
+};
+
+console.log(onlyTitles(movies));
 
 /*--------------------------------------------------------------------*/
 /* ESERCIZIO 13: Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.*/
-  
+
+console.log('****ESERCIZIO 13****');
+
+const onlyInThisMillennium = (array) => {
+	let result = [];
+	for (let i = 0; i < array.length; i++) {
+		if (parseInt(array[i].Year) > 2000) {
+			result.push(array[i]);
+		}
+	}
+	return result;
+};
+
+// SOLUZIONE ALTERNATIVA
+/* const onlyInThisMillennium = array => {
+  return array.filter(elem => parseInt(elem.Year) > 1999)
+} */
+console.log(onlyInThisMillennium(movies));
 
 /*--------------------------------------------------------------------*/
 /* ESERCIZIO 14: Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).*/
 
+console.log('****ESERCIZIO 14****');
+
+const getMovieById = function (array, id) {
+	let foundMovie = null;
+	for (let i = 0; i < array.length; i++) {
+		if (array[i].imdbID === id) {
+			foundMovie = array[i];
+		}
+	}
+	return foundMovie;
+};
+
+// SOLUZIONE ALTERNATIVA
+/* const getMovieById = function (array, id) {
+  return array.find(elem => elem.imdbID === id)
+}*/
+
+console.log(getMovieById(movies, 'tt0355702'));
 
 /*--------------------------------------------------------------------*/
 /* ESERCIZIO 15: Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.*/
+
+console.log('****ESERCIZIO 15****');
+
+const sumAllTheYears = (array) => {
+	let result = 0;
+	for (let i = 0; i < array.length; i++) {
+		result += parseInt(array[i].Year);
+	}
+	return result;
+};
+
+// SOLUZIONE ALTERNATIVA
+
+/* const sumAllTheYears = array => {
+  return array.reduce((acc, curr) => acc + parseInt(curr.Year), 0)
+}*/
+
+console.log(sumAllTheYears(movies));
+
+//----------------------------------------------
+
+/* ESERCIZIO 16 EXTRA
+  Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
+*/
+
+var selezione = document.getElementById('selezione');
+
+// Popolamento della combo
+for (let i = 0; i < movies.length; i++) {
+	selezione.innerHTML += `<option value="${movies[i].imdbID}">${movies[i].Title}</option>`;
+}
+
+// Ricerca film selezionato
+var btnScegli = document.getElementById('scegli');
+btnScegli.addEventListener('click', function () {
+	var selezionato = selezione.value;
+	for (let i = 0; i < movies.length; i++) {
+		if (movies[i].imdbID == selezionato) {
+			document.getElementById(
+				'scheda'
+			).innerHTML = `<h1>${movies[i].Title}</h1><h3>Anno: ${movies[i].Year}</h3><img src=${movies[i].Poster}>`;
+		}
+	}
+});
